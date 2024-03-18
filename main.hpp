@@ -5,7 +5,11 @@
  #include <fstream>
  using namespace std;
 
- void writeFile(const string& filename, int& empN) {
+ #include <iostream>
+#include <fstream>
+using namespace std;
+
+void writeFile(const string& filename, int& empN) {
     ofstream ofs(filename);
     if (!ofs.is_open()) {
         cout << "File Open Error\n";
@@ -15,10 +19,12 @@
     cout << "Enter the number of employees: ";
     cin >> N;
     ofs << N << endl;
+
+    int id;
+    string names, department;
+    double salary;
+
     for (int i = 0; i < N; i++) {
-        int id;
-        string names, department;
-        double salary;
         cout << "Enter employee details (id name department salary): ";
         cin >> id >> names >> department >> salary;
         ofs << id << " " << names << " " << department << " " << salary << endl;

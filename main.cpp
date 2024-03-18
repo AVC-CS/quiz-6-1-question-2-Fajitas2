@@ -2,11 +2,8 @@
 
 int main()
 {
-
-    
-    
-    string filename = "employee.txt";
-    int empN;
+   string filename = "employee.txt";
+    int empN = 0;
 
     writeFile(filename, empN);
     cout << "File created with " << empN << " employee records\n";
@@ -14,5 +11,7 @@ int main()
     readFile(filename, empN);
     cout << "The total number of employees read " << empN << endl;
     return 0;
+    
+    
     
 }
